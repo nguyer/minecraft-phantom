@@ -11,9 +11,9 @@ Here is a `docker run` command that run the proxy in the background and automati
 
     $ sudo docker run -it -d --name=minecraft-phantom\
         --net=host\
-        --restart=always\
-        nguyer/minecraft-phantom\
-        [your_server_ip]:[optional_server_port]
+        --restart=unless-stopped\
+        -e SERVER=[your_server_ip]:[your_server_port]
+        nguyer/minecraft-phantom
 
 Hopefully this is helpful to folks. Happy Minecrafting!
 
